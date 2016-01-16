@@ -1,0 +1,65 @@
+{
+  "name": "extendable-error",
+  "version": "0.0.0",
+  "description": "Simple extendable error class",
+  "main": "index.js",
+  "files": [
+    "dist",
+    "docs",
+    "src"
+  ],
+  "scripts": {
+    "lint": "gulp lint",
+    "test": "gulp test",
+    "preversion": "echo \"Another version! Keep up the good work!\"",
+    "version": "",
+    "postversion": "git push && git push --tags",
+    "prepublish": "gulp build && gulp doc",
+    "coveralls": "gulp test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mlucool/extendable-error.git"
+  },
+  "keywords": [
+    "error",
+    "es6",
+    "FSA",
+    "promise",
+    "javascript"
+  ],
+  "author": {
+    "name": "Marc Udoff",
+    "email": "marc.opensource@gmail.com"
+  },
+  "license": "Apache-2.0",
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "bugs": {
+    "url": "https://github.com/mlucool/extendable-error/issues"
+  },
+  "homepage": "https://github.com/mlucool/extendable-error#readme",
+  "devDependencies": {
+    "babel-cli": "^6.3.15",
+    "babel-core": "^6.3.15",
+    "babel-eslint": "^4.1.6",
+    "babel-preset-es2015": "^6.3.13",
+    "chai": "^3.4.1",
+    "coveralls": "^2.11.6",
+    "eslint": "^1.10.3",
+    "eslint-plugin-babel": "^3.0.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.1",
+    "gulp-eslint": "^1.1.1",
+    "gulp-jsdoc3": "^0.1.0",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-mocha": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "isparta": "^4.0.0",
+    "mocha": "^2.3.4",
+    "pre-commit": "^1.1.2",
+    "run-sequence": "^1.1.5"
+  }
+}
